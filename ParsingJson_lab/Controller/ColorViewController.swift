@@ -50,6 +50,23 @@ class ColorViewController: UIViewController, UITableViewDataSource, UITableViewD
         //whatever we decode from the json file
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let segueIdentifier = segue.identifier else { fatalError("No identifier in segue") }
+        
+        switch segueIdentifier {
+        case "colorSegway" :
+            guard let colorVC = segue.destination as? SchemeViewController else {
+                fatalError("Unexpected segue VC")
+            }
+            guard let selectedIndexPath = colorTableViewOutlet.indexPathForSelectedRow else {
+                fatalError("No row was selected")
+            }
+            colorVC.coloring = colors[selectedIndexPath.row]
+        default:
+            fatalError("Nice Try")
+        }
+    }
+    
 
     /*
     // MARK: - Navigation

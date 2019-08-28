@@ -23,9 +23,9 @@ class WeatherViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.detailTextLabel?.text = "Temperature Celsius: \(weathers[indexPath.row].main.temp)"
         return cell
     }
-
     
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         weatherTableViewOutlet.dataSource = self
@@ -50,6 +50,22 @@ class WeatherViewController: UIViewController, UITableViewDataSource, UITableVie
             fatalError("couldn't get weather from JSON")
         }
         //whatever we decode from the json file
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let segueIdentifier = segue.identifier else { fatalError("No identifier in segue") }
+        
+        switch segueIdentifier {
+        case "weatherSegway" :
+            guard let weatherVC = segue.destination as? ForcastViewController else {
+                fatalError("Unexpected segue VC")
+            }
+            guard let selectedIndexPath = weatherTableViewOutlet.indexPathForSelectedRow else {
+                fatalError("No row was selected")
+            }
+            weatherVC.forcasts = weathers[selectedIndexPath.row]
+        default:
+            fatalError("Nice Try")
+        }
     }
 }
 

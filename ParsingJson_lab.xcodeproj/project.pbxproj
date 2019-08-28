@@ -20,6 +20,9 @@
 		8587DC822315BA1A00C56F0E /* modelJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587DC812315BA1A00C56F0E /* modelJSON.swift */; };
 		8587DC842315C10C00C56F0E /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587DC832315C10C00C56F0E /* ColorViewController.swift */; };
 		8587DC862315C11A00C56F0E /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587DC852315C11A00C56F0E /* PeopleViewController.swift */; };
+		8587DC892316C35200C56F0E /* ForcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587DC882316C35200C56F0E /* ForcastViewController.swift */; };
+		8587DC8B2316C35E00C56F0E /* SchemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587DC8A2316C35E00C56F0E /* SchemeViewController.swift */; };
+		8587DC8D2316C36700C56F0E /* HumanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587DC8C2316C36700C56F0E /* HumanViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		8587DC812315BA1A00C56F0E /* modelJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modelJSON.swift; sourceTree = "<group>"; };
 		8587DC832315C10C00C56F0E /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 		8587DC852315C11A00C56F0E /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		8587DC882316C35200C56F0E /* ForcastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForcastViewController.swift; sourceTree = "<group>"; };
+		8587DC8A2316C35E00C56F0E /* SchemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeViewController.swift; sourceTree = "<group>"; };
+		8587DC8C2316C36700C56F0E /* HumanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,8 +167,11 @@
 			isa = PBXGroup;
 			children = (
 				8587DC4D2315A93800C56F0E /* WeatherViewController.swift */,
+				8587DC882316C35200C56F0E /* ForcastViewController.swift */,
 				8587DC832315C10C00C56F0E /* ColorViewController.swift */,
+				8587DC8A2316C35E00C56F0E /* SchemeViewController.swift */,
 				8587DC852315C11A00C56F0E /* PeopleViewController.swift */,
+				8587DC8C2316C36700C56F0E /* HumanViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -305,7 +314,10 @@
 				8587DC4E2315A93800C56F0E /* WeatherViewController.swift in Sources */,
 				8587DC4C2315A93800C56F0E /* AppDelegate.swift in Sources */,
 				8587DC842315C10C00C56F0E /* ColorViewController.swift in Sources */,
+				8587DC8D2316C36700C56F0E /* HumanViewController.swift in Sources */,
+				8587DC8B2316C35E00C56F0E /* SchemeViewController.swift in Sources */,
 				8587DC822315BA1A00C56F0E /* modelJSON.swift in Sources */,
+				8587DC892316C35200C56F0E /* ForcastViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -48,7 +48,24 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
         } catch{
             fatalError("couldn't get weather from JSON")
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let segueIdentifier = segue.identifier else { fatalError("No identifier in segue") }
         
+        switch segueIdentifier {
+        case "humanSegway" :
+            guard let humanVC = segue.destination as? HumanViewController else {
+                fatalError("Unexpected segue VC")
+            }
+            guard let selectedIndexPath = peopleTableViewOutlet.indexPathForSelectedRow else {
+                fatalError("No row was selected")
+            }
+            humanVC.person = humans[selectedIndexPath.row]
+        default:
+            fatalError("Nice Try")
+        }
+    }
         
         /*
          // MARK: - Navigation
@@ -59,6 +76,5 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
          // Pass the selected object to the new view controller.
          }
          */
-        
-    }
+    
 }
